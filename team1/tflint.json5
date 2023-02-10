@@ -1,0 +1,11 @@
+{
+  "regexManagers": [
+    {
+      "fileMatch": ["^test$"],
+      "matchStrings": ["test-tflint (?<currentValue>\\S+)"],
+      "depNameTemplate": "terraform-linters/tflint",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^(?<version>\\S+)"
+    }
+  ]
+}
