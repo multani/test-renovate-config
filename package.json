@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "json5": "^2.2.3",
+    "jsonlint": "^1.6.3"
+  }
+}
