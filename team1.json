@@ -3,5 +3,5 @@
     "config:base",
     "github>multani/test-renovate-config//team1/terraform.json5"
   ],
-  "dependencyDashboard": true,
+  "dependencyDashboard": true
 }
