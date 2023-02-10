@@ -1,7 +1,7 @@
 {
   "regexManagers": [
     {
-      "fileMatch": ["^test$"],
+      "fileMatch": ["test"],
       "matchStrings": ["test-tflint (?<currentValue>\\S+)"],
       "depNameTemplate": "terraform-linters/tflint",
       "datasourceTemplate": "github-releases",
@@ -12,7 +12,7 @@
   "packageRules": [
     {
       "matchPackagePatterns": ["^terraform-linters/tflint$"],
-      "automerge": true,
+      //"automerge": true,
     }
   ]
 }
