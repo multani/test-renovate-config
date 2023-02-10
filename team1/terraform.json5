@@ -1,0 +1,11 @@
+{
+  "regexManagers": [
+    {
+      "fileMatch": ["^test$"],
+      "matchStrings": ["test-terraform (?<currentValue>\\S+)"],
+      "depNameTemplate": "hashicorp/terraform",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^(?<version>\\S+)"
+    },
+  ]
+}
