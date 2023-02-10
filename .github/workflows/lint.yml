@@ -24,6 +24,5 @@ jobs:
           find -name "*.json" -print0 | xargs -0 -t -n 1 -I FILE jsonlint FILE --quiet --compact
 
       - name: Validate JSON5
-        continue-on-error: true
         run: |
           find -name "*.json5" -print0 | xargs -0 -t -n 1 json5 --validate
