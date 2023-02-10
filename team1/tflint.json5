@@ -7,5 +7,12 @@
       "datasourceTemplate": "github-releases",
       "extractVersionTemplate": "^(?<version>\\S+)"
     }
+  ],
+
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["^terraform-linters/tflint$"],
+      "automerge": true,
+    }
   ]
 }
