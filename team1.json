@@ -2,7 +2,7 @@
   "extends": [
     "config:base",
     "github>multani/test-renovate-config//team1/terraform.json5",
-    "github>multani/test-renovate-config//team1/tflint.json5",
+    "github>multani/test-renovate-config//team1/tflint.json5"
   ],
   "dependencyDashboard": true
 }

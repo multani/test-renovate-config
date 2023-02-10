@@ -1,4 +1,4 @@
-name: lint
+name: Lint
 
 on:
   push:
@@ -6,8 +6,9 @@ on:
       - "**"
 
 jobs:
-  lint:
+  json:
     runs-on: ubuntu-latest
+    name: Lint JSON
     steps:
       - uses: actions/checkout@v3
 
@@ -15,14 +16,27 @@ jobs:
         with:
           cache: npm
 
-      - name: Install linters
-        run: npm install --global jsonlint json5
+      - name: Install linter
+        run: npm install --global jsonlint
 
       - name: Validate JSON
-        continue-on-error: true
         run: |
-          find -name "*.json" -print0 | xargs -0 -t -n 1 -I FILE jsonlint FILE --quiet --compact
+          find -name "*.json" -print0 | xargs -0 -t -I FILE jsonlint FILE --quiet --compact
+
+  json5:
+    runs-on: ubuntu-latest
+    name: Lint JSON5
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          cache: npm
+
+      - name: Install linter
+        run: npm install --global json5
 
       - name: Validate JSON5
         run: |
           find -name "*.json5" -print0 | xargs -0 -t -n 1 json5 --validate
+
